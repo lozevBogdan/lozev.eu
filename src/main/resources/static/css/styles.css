@@ -1,0 +1,196 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; /* Light gray background */
+    overflow-x: hidden; /* Hide horizontal scrollbar on smaller screens */
+}
+#greetings {
+    /* font-size: 18px */
+}
+
+.navbar {
+    background-color: #333; /* Dark background color for the navbar */
+    overflow: hidden;
+    padding: 10px 0; /* Adjust padding for better spacing */
+}
+
+#landing {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 0; /* Updated padding to 14px on top/bottom and 0 on left/right */
+    text-decoration: none;
+    width: 100%; 
+    box-sizing: border-box; /* Include padding in the width calculation */
+}
+
+.navbar a:hover {
+    background-color: #ddd; /* Darker background color on hover */
+    color: black;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.content {
+    padding: 40px;
+}
+
+#contactForm {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+#contactForm label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+#contactForm input,
+#contactForm textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#contactForm button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#contactForm button:hover {
+    background-color: #555;
+}
+
+.profile-picture {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+/* Add more styles as needed */
+
+
+/* Add more styles as needed */
+
+/* Add this style for slow loading effect */
+body.loaded .content {
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+body .content {
+    opacity: 0;
+}
+
+
+/* Add a media query for small screens */
+@media screen and (min-width: 601px) {
+    .navbar a {
+        width: 16.666%; /* Each link takes up 1/6th of the width on larger screens */
+    }
+}
+
+/* Add this style for slow loading effect */
+body.loaded .content {
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+body .content {
+    opacity: 0;
+}
+
+
+
+
+
+
+/* Style for the Work Experience page */
+.content {
+    padding: 40px;
+}
+
+.work-entry {
+    margin-bottom: 30px;
+    border-top: 2px solid #333; /* Border above each work entry */
+    border-bottom: 2px solid #333; /* Border below each work entry */
+    padding: 20px 0; /* Add padding for better spacing */
+}
+
+.work-entry h3 {
+    margin-bottom: 10px;
+}
+
+.work-details {
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.work-entry ul {
+    list-style-type: none; /* Remove the bullets */
+    margin-left: 20px;
+    padding-left: 0; /* Remove default padding */
+}
+
+.work-entry li {
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+
+
+/* Add this style for slow loading effect */
+body.loaded .content {
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+body .content {
+    opacity: 0;
+}
+
+/* Style for the Skills  page */
+.skills {
+    /* font-size: 18px; */
+    font-weight: bold;
+}
+
+/* Style for the Project  page */
+.project-border {
+    border-top: 2px solid #333; /* Border above each project */
+    border-bottom: 2px solid #333; /* Border below each project */
+    padding: 20px 0; /* Add padding for better spacing */
+}
+
+.responsive-image {
+    max-width: 100%;
+    height: auto;
+}
+
