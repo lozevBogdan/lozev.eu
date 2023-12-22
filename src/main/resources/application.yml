@@ -1,4 +1,16 @@
 spring:
+  mail:
+    host: smtp.abv.bg
+    port: 465
+    username: kurdoto@abv.bg
+    password: samsungA500
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+    protocol: smtp
 
   datasource:
     driverClassName: com.mysql.cj.jdbc.Driver
@@ -14,10 +26,10 @@ spring:
   jpa:
     # Choose either MySQL 8 or MySQL 5 below
     # For MySQL 8
-    #database-platform: org.hibernate.dialect.MySQL8Dialect
+    database-platform: org.hibernate.dialect.MySQL8Dialect
     #For MySQL 5
     #database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
-    database-platform: org.hibernate.dialect.MySQLDialect
+    #database-platform: org.hibernate.dialect.MySQLDialect
     hibernate:
       ddl-auto: create
     open-in-view: false
@@ -34,7 +46,7 @@ logging:
   level:
     org.hibernate.SQL: DEBUG
     org.hibernate.type.descriptor.sql.BasicBinder: TRACE
-    root: DEBUG
+    #root: DEBUG
 
 management:
   endpoints:
@@ -44,3 +56,4 @@ management:
       base-path: "/admin"
   server:
     port: 8081
+

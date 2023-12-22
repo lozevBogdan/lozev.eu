@@ -1,28 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bogdan Lozev - Java Developer</title>
-    <link rel="stylesheet" href="../static/css/styles.css">
-</head>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/head :: head}"></head>
 <body>
 
-    <!-- Navigation Bar -->
-    <div class="navbar">
-        <a href="home.html">Home</a>
-        <a href="about.html">About Me</a>
-        <a href="skills.html">Skills</a>
-        <a href="projects.html">Projects</a>
-        <a href="work.html">Work</a>
-        <a href="contact.html">Contact</a>
-    </div>
+<div th:replace="~{fragments/nav :: nav}"></div>
 
     <!-- Page Content -->
     <div class="content home-content">
         <div class="container">
             <div class="intro-section">
-                <img src="../static/img/AAA_2536.JPG" alt="Bogdan Lozev" class="profile-picture">
+                <img th:src="@{/img/AAA_2536.JPG}" alt="Bogdan Lozev" class="profile-picture">
                 <h1>Bogdan Lozev</h1>
                 <p id="landing">Very well done - you have landed on my home page! Welcome!👋</p>
                 <p id="greetings">I'm Bogdan Lozev, a dedicated Java Developer, who loves building cool things with code. I`m based in the Sofia, Bulgaria. 
@@ -31,7 +19,7 @@
         </div>
     </div>
 
-    <script src="../static/js/javaScript.js"></script>
+    <script th:src="@{/js/javaScript.js}"></script>
 
 </body>
 </html>

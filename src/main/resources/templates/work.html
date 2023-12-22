@@ -1,21 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume/CV - Java Developer</title>
-    <link rel="stylesheet" href="../static/css/styles.css">
-</head>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/head :: head}"></head>
 <body>
 
-    <div class="navbar">
-        <a href="index.html">Home</a>
-        <a href="about.html">About Me</a>
-        <a href="skills.html">Skills</a>
-        <a href="projects.html">Projects</a>
-        <a href="work.html">Work</a>
-        <a href="contact.html">Contact</a>
-    </div>
+<div th:replace="~{fragments/nav :: nav}"></div>
 
     <div class="content">
         <div class="container">
@@ -44,8 +33,9 @@
             </ul>
     </div>
     </div>
+    </div>
 
-    <script src="../static/js/javaScript.js"></script>
+        <script th:src="@{/js/javaScript.js}"></script>
 
 </body>
 </html>

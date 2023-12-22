@@ -1,21 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects - Java Developer</title>
-    <link rel="stylesheet" href="../static/css/styles.css">
-</head>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/head :: head}"></head>
 <body>
 
-    <div class="navbar">
-        <a href="index.html">Home</a>
-        <a href="about.html">About Me</a>
-        <a href="skills.html">Skills</a>
-        <a href="projects.html">Projects</a>
-        <a href="work.html">Work</a>
-        <a href="contact.html">Contact</a>
-    </div>
+<div th:replace="~{fragments/nav :: nav}"></div>
 
     <div class="content">
         <div class="container">
@@ -25,10 +14,10 @@
                 <div class="project-border">
                     <h3>Sell8Buy</h3>
                     <p>This project is my defense project for Java Web course at SoftUni (July 2022). It is an application where you can easily sell and buy anything, make registration, login, add or remove you product, send messages, make comments and management by admin. </p>
-                    <img src="../static/img/seel8buy_screenshot.png" alt="Sell8Buy Screenshot" class="responsive-image" width="800" height="400">
+                    <img th:src="@{/img/seel8buy_screenshot.png}" alt="Sell8Buy Screenshot" class="responsive-image" width="800" height="400">
                     <p>Technologies: HTML, CSS, JavaScript JAVA, Spring Boot, Spring Data, Spring Security, Spring MVC, Hibernate, MySQL, Thymeleaf and REST.</p>
                     <!-- <a href="project1-demo.html" target="_blank">View Demo</a> -->
-                    <a href="https://github.com/lozevBogdan/Buy8Sell" target="_blank">GitHub Repository</a>
+                    <a th:href="@{https://github.com/lozevBogdan/Buy8Sell}" target="_blank">GitHub Repository</a>
                 </div>
             </div>
 
@@ -46,10 +35,10 @@
         </div>
     </div>
 
-    
 
 
-    <script src="../static/js/javaScript.js"></script>
+
+  <script th:src="@{/js/javaScript.js}"></script>
 
 </body>
 </html>
