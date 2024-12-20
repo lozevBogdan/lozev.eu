@@ -1,4 +1,11 @@
 spring:
+  profiles:
+    active: local
+
+---
+spring:
+  profiles:
+    active: local
   mail:
     host: smtp.abv.bg
     port: 465
