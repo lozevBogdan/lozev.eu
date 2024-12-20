@@ -122,6 +122,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		<finalName>lozev.eu</finalName>
 	</build>
 
 </project>
