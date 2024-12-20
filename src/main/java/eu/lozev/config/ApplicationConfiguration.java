@@ -21,8 +21,8 @@ public class ApplicationConfiguration {
         JavaMailSenderImpl mailSender = new JavaMailSenderImpl();
         mailSender.setHost("smtp.abv.bg");
         mailSender.setPort(465);
-        mailSender.setUsername("kurdoto@abv.bg");
-        mailSender.setPassword("samsungA500");
+        mailSender.setUsername("");
+        mailSender.setPassword("");
 
         return mailSender;
     }
