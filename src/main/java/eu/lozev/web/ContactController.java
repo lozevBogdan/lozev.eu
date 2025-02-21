@@ -2,7 +2,7 @@ package eu.lozev.web;
 
 import ch.qos.logback.core.model.Model;
 import eu.lozev.model.binding.ContactMessageBindingModel;
-import eu.lozev.model.entity.MessageEntity;
+//import eu.lozev.model.entity.MessageEntity;
 import eu.lozev.services.EmailService;
 import eu.lozev.services.MessageService;
 import org.slf4j.Logger;
@@ -46,7 +46,7 @@ public class ContactController {
         String about = contactMessageBindingModel.getAbout();
         String message = contactMessageBindingModel.getMessage();
 
-        MessageEntity messageEntity = messageService.saveMessage(contactMessageBindingModel);
+       // MessageEntity messageEntity = messageService.saveMessage(contactMessageBindingModel);
 
         // emailService.sendEmail("lozev.bogdan@abv.bg", from + ": " + about, message);
         //TODO: return appropiate message
