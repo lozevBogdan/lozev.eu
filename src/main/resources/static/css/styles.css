@@ -113,7 +113,8 @@ body .content {
 /* Add a media query for small screens */
 @media screen and (min-width: 601px) {
     .navbar a {
-        width: 16.666%; /* Each link takes up 1/6th of the width on larger screens */
+      /*  width: 16.666%; /* Each link takes up 1/6th of the width on larger screens */
+        width: 20%; /* Each link takes up 1/5th of the width on larger screens, after projects section remove */
     }
 }
 
