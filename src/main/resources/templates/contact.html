@@ -6,50 +6,70 @@
 
 <div th:replace="~{fragments/nav :: nav}"></div>
 
-    <div class="content">
-        <div class="container">
-            <h2>Contact</h2>
+<div class="content">
+    <div class="container">
+        <h2>Contact</h2>
 
-            <div class="social-links">
-                <a th:href="@{https://github.com/lozevBogdan}" target="_blank">
-                    <img th:src="@{/img/github_logo.png}" alt="GitHub" width="40" height="40">
-                </a>
-                <a th:href="@{https://www.linkedin.com/in/bogdan-lozev-463546149/}" target="_blank">
-                    <img th:src="@{/img/linkedin_logo.png}" alt="LinkedIn" width="40" height="40">
-                </a>
-                <a th:href="@{https://www.facebook.com/lozev1992/}" target="_blank">
-                    <img th:src="@{/img/fb_logo.jpg}" alt="Facebook" width="40" height="40">
-                </a>
+        <div class="social-links">
+            <a th:href="@{https://github.com/lozevBogdan}" target="_blank">
+                <img th:src="@{/img/github_logo.png}" alt="GitHub" width="40" height="40">
+            </a>
+            <a th:href="@{https://www.linkedin.com/in/bogdan-lozev-463546149/}" target="_blank">
+                <img th:src="@{/img/linkedin_logo.png}" alt="LinkedIn" width="40" height="40">
+            </a>
+            <a th:href="@{https://www.facebook.com/lozev1992/}" target="_blank">
+                <img th:src="@{/img/fb_logo.jpg}" alt="Facebook" width="40" height="40">
+            </a>
+        </div>
+
+        <p>Feel free to reach out to me through the following form:</p>
+
+        <!-- Old Contact Form -->
+        <!--            <form id="contactForm"-->
+        <!--                  th:action="@{/contact}"-->
+        <!--                  th:object="${contactMessageBindingModel}"-->
+        <!--                  th:method="post">-->
+        <!--                <div class="form-group">-->
+        <!--                    <label for="from">From:</label>-->
+        <!--                    <input th:field="*{from}" type="text" id="from" name="from" required>-->
+        <!--                </div>-->
+
+        <!--                <div class="form-group">-->
+        <!--                    <label for="about">About:</label>-->
+        <!--                    <input th:field="*{about}" type="text" id="about" name="about" required>-->
+        <!--                </div>-->
+
+        <!--                <div class="form-group">-->
+        <!--                    <label for="text-message">Message:</label>-->
+        <!--                    <textarea th:field="*{message}" id="text-message" name="text-message" rows="4" required></textarea>-->
+        <!--                </div>-->
+
+        <!--                <button type="submit">Send</button>-->
+        <!--            </form>-->
+
+        <!-- New temporary Contact Form -->
+        <form id="contactForm" onsubmit="sendEmail(event)">
+            <div class="form-group">
+                <label for="from">From:</label>
+                <input type="text" id="from" name="from" required>
             </div>
 
-            <p>Feel free to reach out to me through the following form:</p>
+            <div class="form-group">
+                <label for="about">About:</label>
+                <input type="text" id="about" name="about" required>
+            </div>
 
-            <!-- Enhanced Contact Form -->
-            <form id="contactForm"
-                  th:action="@{/contact}"
-                  th:object="${contactMessageBindingModel}"
-                  th:method="post">
-                <div class="form-group">
-                    <label for="from">From:</label>
-                    <input th:field="*{from}" type="text" id="from" name="from" required>
-                </div>
+            <div class="form-group">
+                <label for="text-message">Message:</label>
+                <textarea id="text-message" name="text-message" rows="4" required></textarea>
+            </div>
 
-                <div class="form-group">
-                    <label for="about">About:</label>
-                    <input th:field="*{about}" type="text" id="about" name="about" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="text-message">Message:</label>
-                    <textarea th:field="*{message}" id="text-message" name="text-message" rows="4" required></textarea>
-                </div>
-
-                <button type="submit">Send</button>
-            </form>
-        </div>
+            <button type="submit">Send</button>
+        </form>
     </div>
+</div>
 
-    <script th:src="@{/js/javaScript.js}"></script>
+<script th:src="@{/js/javaScript.js}"></script>
 
 </body>
 </html>
